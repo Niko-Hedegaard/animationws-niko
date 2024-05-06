@@ -1,0 +1,33 @@
+img {
+    width: 1250px 250px;
+}
+
+.sprite {
+    width: 500px;
+    /* bredde på artboarded */
+    height: 500px;
+    /* højde på artboarded */
+    background: url('../images/panda-animation.png') 0 0 no-repeat;
+    /* [property]: url('[billede link]') [positionX] [positionY] [repeat eller no-repeat]; */
+    background-position: center;
+    background-size: 2500px 500px;
+    animation: play 0.8s steps(5) infinite;
+    /* [animation property]: play [antal sekunder] steps([hvor mange artboards er der]) [loop eller intet loop]; */
+    border-radius: 10px;
+}
+
+@keyframes play {
+    0% {
+        background-position: 0px;
+        /* starter på 0 punktet */
+    }
+
+    100% {
+        background-position: -2500px;
+        /* baggrund flytter sig til slut anchor point (i det her tilfælde er det 50*10=500 som skal rykkes til venstre =-500px) */
+    }
+}
+
+.badge-base-LI-profile-badge {
+    transform: scale(0.5);
+}
